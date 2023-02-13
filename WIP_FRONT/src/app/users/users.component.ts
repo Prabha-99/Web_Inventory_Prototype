@@ -14,7 +14,7 @@ export class UsersComponent {
 
 
   ngOnInit(){
-    let response= this.http.get("http://localhost:8080//api/tables"); //Here
+    let response= this.http.get("http://localhost:8080/api/tables"); //Here
     response.subscribe((data)=>this.users=data);
  }
 
