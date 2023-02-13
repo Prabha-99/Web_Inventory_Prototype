@@ -16,6 +16,6 @@ public class User {
     private int userID;
     private String userFName;
     private String userLName;
-    private int email;
+    private String email;
     private String userRole;
 }
