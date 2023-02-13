@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-10">
+      <table class="table align-midle table-hover ">
+        <thead>
+          <tr>
+            
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{user.userID}}</td>
+            <td>{{user.userName}}</td>
+            <td>{{user.userRole}}</td>
+          </tr> 
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
