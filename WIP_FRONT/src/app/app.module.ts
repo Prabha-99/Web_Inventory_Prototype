@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UsersComponent } from './users/users.component';
+import { ProductsComponent } from './products/products.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { UsersComponent } from './users/users.component';
     HomeComponent,
     SidebarComponent,
     UsersComponent,
+    ProductsComponent,
    
   ],
   imports: [
