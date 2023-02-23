@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { users } from './users.model';
 
 
 @Injectable({
@@ -12,8 +13,8 @@ export class UserServiceService {
 
   constructor(private http:HttpClient) { }
 
-  // getDataByField1(field1: string): Observable<User[]> {
-  //   return this.http.get<User[]>(`${this.apiURL}/${field1}`);
-  // }
+  getDataByField1(field1: string): Observable<users[]> {
+    return this.http.get<users[]>(`${this.apiURL}/${field1}`);
+  }
 
 }
