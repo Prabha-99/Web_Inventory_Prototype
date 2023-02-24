@@ -1,20 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { users } from './users.model';
-
+import { User } from './User';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserServiceService {
 
-  private apiURL="http://localhost:8080/api/tables/field1/{field1}" //The API URL(Endpoint)
+  private Endpoint = 'http://localhost:8080//api/tables/allUsers';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getDataByField1(field1: string): Observable<users[]> {
-    return this.http.get<users[]>(`${this.apiURL}/${field1}`);
+  getAllUsers(): Observable<User[]>{
+    return this.http.get<User[]>(this.Endpoint);
   }
-
 }

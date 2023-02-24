@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { User } from '../User';
 import { UserServiceService } from '../user-service.service';
+
+
 
 @Component({
   selector: 'app-users',
@@ -9,13 +12,16 @@ import { UserServiceService } from '../user-service.service';
 })
 export class UsersComponent implements OnInit{
 
-  users:any;
+  users: User[] = [];
 
-  constructor(private userSerive: UserServiceService) { }
+  constructor(private userService: UserServiceService) { }
 
+  ngOnInit(): void {
+    this.userService.getAllUsers()
+      .subscribe(users => {
+        this.users = users;
+      });
 
-  ngOnInit(){
-    // this.userSerive.getUsers().
- }
+  }
 
 }
