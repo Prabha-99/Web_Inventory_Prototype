@@ -1,22 +1,24 @@
-import {JsonProperty} from '@nestjs/mapped-types';
+
+import { ApiProperty } from '@nestjs/swagger';
+
 
 export class User {
   
 
-  @JsonProperty('userID')
-  userID: number;
+  @ApiProperty()
+  userID: number | undefined;
 
-  @JsonProperty('userFName')
-  userFName: String;
+  @ApiProperty()
+  userFName: String | undefined;
 
-  @JsonProperty('userLName')
-  userLName: String;
+  @ApiProperty()
+  userLName: String | undefined;
 
-  @JsonProperty('email')
-  email: String;
+  @ApiProperty()
+  email: String | undefined;
 
-  @JsonProperty('userRole')
-  userRole:String;
+  @ApiProperty()
+  userRole:String | undefined;
 
   // additional properties and methods can be defined here
 }

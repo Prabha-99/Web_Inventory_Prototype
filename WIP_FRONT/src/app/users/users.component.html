@@ -24,11 +24,11 @@
                       </thead>
                       <tbody>
                         <tr *ngFor="let user of users">
-                          <td>{{user.userid}}</td>
+                          <td>{{user.userID}}</td>
                           <td>{{user.email}}</td>
-                          <td>{{user.userfname}}</td>
-                          <td>{{user.userlname}}</td>
-                          <td>{{user.user_role}}</td>
+                          <td>{{user.userFName}}</td>
+                          <td>{{user.userLName}}</td>
+                          <td>{{user.userRole}}</td>
                         </tr> 
                       </tbody>
                     </table>
@@ -38,3 +38,10 @@
         </div>
     </div>
 </div>
+
+<!-- <ng-container *ngIf="users && users.length">
+  <div *ngFor="let user of users">
+    <h2>{{ user.userID }}</h2>
+    <p>{{ user.userFName }}</p>
+  </div>
+</ng-container> -->
