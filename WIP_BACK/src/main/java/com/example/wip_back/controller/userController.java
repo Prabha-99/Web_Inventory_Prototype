@@ -19,7 +19,7 @@ public class userController {
         this.userService = userService;
     }
 
-    @GetMapping("/api/tables/allUsers")
+    @GetMapping("/allUsers")
     public List<User> getAllUsers(){
         return userService.getAllUsers();
     }
