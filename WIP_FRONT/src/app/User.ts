@@ -6,19 +6,19 @@ export class User {
   
 
   @ApiProperty()
-  userID: number | undefined;
+  readonly userID: number | undefined;
 
   @ApiProperty()
-  userFName: String | undefined;
+  readonly userFName: String | undefined;
 
   @ApiProperty()
-  userLName: String | undefined;
+  readonly userLName: String | undefined;
 
   @ApiProperty()
-  email: String | undefined;
+  readonly email: String | undefined;
 
   @ApiProperty()
-  userRole:String | undefined;
+  readonly userRole: String | undefined;
 
   // additional properties and methods can be defined here
 }
