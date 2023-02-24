@@ -14,15 +14,13 @@ public class userService {
 
     @Autowired
     public userService(userRepo userrepo) {
+
         this.userrepo = userrepo;
     }
 
-    public List<User> getAllTableData(){
+    public List<User> getAllUsers(){
         return userrepo.findAll();
     }
 
-    public List<User> findByField1(String field1) {
-        return userrepo.findByField1(field1);
-    }
 
 }

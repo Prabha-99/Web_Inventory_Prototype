@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface userRepo extends JpaRepository<User,Integer> {
 
-    @Query(value = "SELECT * FROM users WHERE field1 = :field1", nativeQuery = true)
-    List<User> findByField1(@Param("field1") String field1);
+    @Query(value = "SELECT * FROM users",nativeQuery = true)
+    List<User> findAllUsers();
 
 }

@@ -20,14 +20,8 @@ public class userController {
     }
 
     @GetMapping("/api/tables/allUsers")
-    public List<User> getAllTableData(){
-        return userService.getAllTableData();
-    }
-
-
-    @GetMapping("/field1/{field1}")
-    public List<User> findByField1(@PathVariable String field1) {
-        return userService.findByField1(field1);
+    public List<User> getAllUsers(){
+        return userService.getAllUsers();
     }
 
 
