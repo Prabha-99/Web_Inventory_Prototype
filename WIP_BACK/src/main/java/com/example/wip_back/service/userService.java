@@ -4,8 +4,6 @@ import com.example.wip_back.model.User;
 import com.example.wip_back.repository.userRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.swing.table.TableModel;
 import java.util.List;
 
 @Service
