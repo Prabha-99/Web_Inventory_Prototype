@@ -4,8 +4,6 @@ import com.example.wip_back.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.example.wip_back.service.userService;
-
-import javax.swing.table.TableModel;
 import java.util.List;
 
 @CrossOrigin(origins="http://localhost:4200")
