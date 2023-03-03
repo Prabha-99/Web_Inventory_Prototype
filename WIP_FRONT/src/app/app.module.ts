@@ -9,6 +9,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { UsersComponent } from './users/users.component';
 import { ProductsComponent } from './products/products.component';
 import { LoginComponent } from './login/login.component';
+import { AdduserComponent } from './adduser/adduser.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -21,12 +23,14 @@ import { LoginComponent } from './login/login.component';
     UsersComponent,
     ProductsComponent,
     LoginComponent,
+    AdduserComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
