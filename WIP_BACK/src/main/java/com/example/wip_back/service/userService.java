@@ -8,7 +8,7 @@ import java.util.List;
 
 @Service
 public class userService {
-    private final userRepo userrepo;
+    private static userRepo userrepo;
 
     @Autowired
     public userService(userRepo userrepo) {
@@ -20,5 +20,8 @@ public class userService {
         return userrepo.findAll();
     }
 
+    public static void deleteUser(int userID) {
+        userrepo.deleteById(userID);
+    }
 
 }

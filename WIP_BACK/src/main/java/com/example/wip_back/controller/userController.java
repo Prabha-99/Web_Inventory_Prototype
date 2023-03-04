@@ -13,7 +13,7 @@ import java.util.List;
 @RequestMapping("/api/tables")
 public class userController {
 
-    private final userService userService;
+    private  userService userService;
 
     @Autowired
     private userRepo userrepo;
@@ -33,6 +33,12 @@ public class userController {
     public ResponseEntity<String> submitData(@RequestBody User user) {
         userrepo.save(user);
         return ResponseEntity.ok("Data saved successfully");
+    }
+
+    @DeleteMapping("/deleteUser/{id}")
+    public ResponseEntity<Void> deleteUser(@PathVariable int userID) {
+        userService.deleteUser(userID);
+        return ResponseEntity.noContent().build();
     }
 
 

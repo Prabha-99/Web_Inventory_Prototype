@@ -10,4 +10,6 @@ public interface userRepo extends JpaRepository<User,Integer> {
     @Query(value = "SELECT * FROM users",nativeQuery = true)
     List<User> findAll();
 
+    void deleteById(int userID);
+
 }
