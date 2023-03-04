@@ -23,4 +23,10 @@ export class UsersComponent implements OnInit{
 
   }
 
+  onDelete(userId: number): void {
+    this.userService.deleteUser(userId).subscribe(() => {
+        console.log(`User with ID ${userId} has been deleted.`);
+    });
+}
+
 }

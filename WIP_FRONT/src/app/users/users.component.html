@@ -29,7 +29,9 @@
                           <td>{{user.userFName}}</td>
                           <td>{{user.userLName}}</td>
                           <td>{{user.userRole}}</td>
+                          <td><button class="btn btn-danger" (click)="onDelete(2)">Remove</button></td>
                         </tr> 
+                        <!-- (click)="onDelete(user)" -->
                       </tbody>
                     </table>
                     <a routerLink="/adduser" class=" text-decoration-none ">
@@ -43,9 +45,3 @@
     </div>
 </div>
 
-<!-- <ng-container *ngIf="users && users.length">
-  <div *ngFor="let user of users">
-    <h2>{{ user.userID }}</h2>
-    <p>{{ user.userFName }}</p>
-  </div>
-</ng-container> -->

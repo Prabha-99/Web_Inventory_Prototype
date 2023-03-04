@@ -9,6 +9,7 @@ import { User } from './User';
 export class UserServiceService {
 
   private Endpoint = 'http://localhost:8080/api/tables/allUsers';
+  private apiUrl = 'http://localhost:8080/api/tables/deleteUser/{id}';
 
   constructor(private http: HttpClient) { }
 
@@ -19,4 +20,16 @@ export class UserServiceService {
       
     return this.http.get<User[]>(this.Endpoint,{headers});
   }
+
+  submitData(data: any) {
+    const url = 'http://localhost:8080/api/tables/addUser';
+    return this.http.post(url, data);
+  }
+
+  deleteUser(id: number): Observable<void> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete<void>(url);
+  }
+
+
 }

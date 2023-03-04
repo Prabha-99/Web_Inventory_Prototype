@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AdduserService } from '../adduser.service';
+import { UserServiceService } from '../user-service.service';
 
 
 @Component({
@@ -12,7 +12,7 @@ export class AdduserComponent implements OnInit {
 
   form!: FormGroup;
 
-  constructor(private addUserService: AdduserService) { }
+  constructor(private userService: UserServiceService) { }
 
 
   ngOnInit(){
@@ -28,11 +28,14 @@ export class AdduserComponent implements OnInit {
 
   onSubmit(){
     const data = this.form.value;
-    this.addUserService.submitData(data).subscribe(() => {
+    this.userService.submitData(data).subscribe(() => {
       console.log('Data submitted successfully');
     }, (error: any) => {
       console.error('Error submitting data:', error);
     });
   }
+
+
+
 
 }
