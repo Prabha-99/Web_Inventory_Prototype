@@ -16,18 +16,20 @@
                         <tr>
                           
                           <th scope="col">ID</th>
-                          <th scope="col">Email</th>
                           <th scope="col">First Name</th>
                           <th scope="col">Last Name</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Password</th>
                           <th scope="col">Role</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr *ngFor="let user of users">
-                          <td>{{user.userID}}</td>
-                          <td>{{user.email}}</td>
+                          <td>{{user.userID}}</td>                         
                           <td>{{user.userFName}}</td>
                           <td>{{user.userLName}}</td>
+                          <td>{{user.email}}</td>
+                          <td>{{user.password}}</td>
                           <td>{{user.userRole}}</td>
                           <td><button class="btn btn-danger" (click)="onDelete(2)">Remove</button></td>
                         </tr> 

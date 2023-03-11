@@ -18,6 +18,9 @@ export class User {
   readonly email: String | undefined;
 
   @ApiProperty()
+  readonly password: String | undefined;
+
+  @ApiProperty()
   readonly userRole: String | undefined;
 
   // additional properties and methods can be defined here

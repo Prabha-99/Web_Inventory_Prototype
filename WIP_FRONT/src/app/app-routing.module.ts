@@ -9,13 +9,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
-  {path:"",redirectTo:"/login",pathMatch:"full"},
+  { path: '', component: LoginComponent },
   {path:"home",component:HomeComponent},
   {path:"navbar",component:NavbarComponent},
   {path:"sidebar",component:SidebarComponent},
   {path:"users",component:UsersComponent},
   {path:"products",component:ProductsComponent},
-  {path:"login",component:LoginComponent},
   {path:"adduser",component:AdduserComponent}
 ];
 
