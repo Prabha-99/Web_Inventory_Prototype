@@ -1,6 +1,7 @@
 package com.example.wip_back.service;
 
 import com.example.wip_back.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,10 @@ import java.util.Date;
 @Service
 public class AuthService {
 
+
+    @Autowired
     private PasswordEncoder passwordEncoder;
+
 
     public boolean checkPassword(String plainPassword, String hashedPassowrd){
         return passwordEncoder.matches(plainPassword,hashedPassowrd);
