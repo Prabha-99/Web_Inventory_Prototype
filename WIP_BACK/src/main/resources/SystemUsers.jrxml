@@ -1,37 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InventoryUsers" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="146503b3-1a0e-4836-91a7-99316fa5d1ba">
-    
 
-    <field name="ORDERID" class="java.lang.Integer">
-        <property name="com.jaspersoft.studio.field.name" value="ORDERID"/>
-        <property name="com.jaspersoft.studio.field.label" value="ORDERID"/>
-        <property name="com.jaspersoft.studio.field.tree.path" value="ORDERS"/>
+
+    <field name="userID" class="java.lang.Integer">
     </field>
-    <field name="CUSTOMERID" class="java.lang.String">
-        <property name="com.jaspersoft.studio.field.name" value="CUSTOMERID"/>
-        <property name="com.jaspersoft.studio.field.label" value="CUSTOMERID"/>
-        <property name="com.jaspersoft.studio.field.tree.path" value="ORDERS"/>
+    <field name="userFName" class="java.lang.String">
     </field>
-    <field name="EMPLOYEEID" class="java.lang.Integer">
-        <property name="com.jaspersoft.studio.field.name" value="EMPLOYEEID"/>
-        <property name="com.jaspersoft.studio.field.label" value="EMPLOYEEID"/>
-        <property name="com.jaspersoft.studio.field.tree.path" value="ORDERS"/>
+    <field name="userLName" class="java.lang.String">
     </field>
-    <field name="ORDERDATE" class="java.sql.Timestamp">
-        <property name="com.jaspersoft.studio.field.name" value="ORDERDATE"/>
-        <property name="com.jaspersoft.studio.field.label" value="ORDERDATE"/>
-        <property name="com.jaspersoft.studio.field.tree.path" value="ORDERS"/>
+    <field name="email" class="java.lang.String">
     </field>
-    <field name="REQUIREDDATE" class="java.sql.Timestamp">
-        <property name="com.jaspersoft.studio.field.name" value="REQUIREDDATE"/>
-        <property name="com.jaspersoft.studio.field.label" value="REQUIREDDATE"/>
-        <property name="com.jaspersoft.studio.field.tree.path" value="ORDERS"/>
+    <field name="password" class="java.lang.String">
     </field>
-    <field name="SHIPPEDDATE" class="java.sql.Timestamp">
-        <property name="com.jaspersoft.studio.field.name" value="SHIPPEDDATE"/>
-        <property name="com.jaspersoft.studio.field.label" value="SHIPPEDDATE"/>
-        <property name="com.jaspersoft.studio.field.tree.path" value="ORDERS"/>
+    <field name="userRole" class="java.lang.String">
     </field>
     <background>
         <band/>
@@ -157,7 +139,7 @@
                 <textElement>
                     <font size="14"/>
                 </textElement>
-                <textFieldExpression><![CDATA[$F{ORDERID}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{userID}]]></textFieldExpression>
             </textField>
             <textField textAdjust="StretchHeight">
                 <reportElement x="92" y="0" width="92" height="20" uuid="e820ed0b-534d-49d5-8f9a-0e2074aab561">
@@ -166,7 +148,7 @@
                 <textElement>
                     <font size="14"/>
                 </textElement>
-                <textFieldExpression><![CDATA[$F{CUSTOMERID}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{userFName}]]></textFieldExpression>
             </textField>
             <textField textAdjust="StretchHeight">
                 <reportElement x="184" y="0" width="92" height="20" uuid="497fb471-3867-4cb1-8609-2d42a54c9fc6">
@@ -175,7 +157,7 @@
                 <textElement>
                     <font size="14"/>
                 </textElement>
-                <textFieldExpression><![CDATA[$F{EMPLOYEEID}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{userLName}]]></textFieldExpression>
             </textField>
             <textField textAdjust="StretchHeight">
                 <reportElement x="276" y="0" width="92" height="20" uuid="15ec20fe-f542-437a-a8d0-414755af8fe9">
@@ -184,7 +166,7 @@
                 <textElement>
                     <font size="14"/>
                 </textElement>
-                <textFieldExpression><![CDATA[$F{ORDERDATE}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
             </textField>
             <textField textAdjust="StretchHeight">
                 <reportElement x="368" y="0" width="92" height="20" uuid="1e1eab4d-aa08-45af-9fed-a3ee17b54f15">
@@ -193,7 +175,7 @@
                 <textElement>
                     <font size="14"/>
                 </textElement>
-                <textFieldExpression><![CDATA[$F{REQUIREDDATE}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{password}]]></textFieldExpression>
             </textField>
             <textField textAdjust="StretchHeight">
                 <reportElement x="460" y="0" width="92" height="20" uuid="e0b3eebe-70e0-457b-8c25-cd288c5446e0">
@@ -202,7 +184,7 @@
                 <textElement>
                     <font size="14"/>
                 </textElement>
-                <textFieldExpression><![CDATA[$F{SHIPPEDDATE}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{userRole}]]></textFieldExpression>
             </textField>
         </band>
     </detail>
