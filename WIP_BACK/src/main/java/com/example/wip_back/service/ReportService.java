@@ -22,7 +22,7 @@ public class ReportService {
 
     public String exportReport(String format) throws FileNotFoundException, JRException {
         String reportPath = "F:\\Projects\\Wen_Inventory_Prototype\\Reports";// Declaring the Report path as a Global variable.
-        List<User> users=userrepo.findAll();
+        List<User> users=userrepo.findAll();//Retrieving all User Data into a List
 
         //Loading the .jrxml file and Compiling it
         File file= ResourceUtils.getFile("classpath:SystemUsers.jrxml");
@@ -36,7 +36,7 @@ public class ReportService {
         JasperPrint print= JasperFillManager.fillReport(jasperReport,parameters,source);
         if(format.equalsIgnoreCase("html")){
             JasperExportManager.exportReportToHtmlFile(print,reportPath+"\\Users.html");
-        }else{
+        }if(format.equalsIgnoreCase("pdf")){
             JasperExportManager.exportReportToPdfFile(print,reportPath+"\\Users.pdf");
         }
         return "Report generated Successfully at : "+reportPath;
