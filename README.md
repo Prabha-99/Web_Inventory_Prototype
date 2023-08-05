@@ -1,1 +1,1 @@
-# Web_Inventory_Prototype(Spring)
+# Web_Inventory_Prototype
