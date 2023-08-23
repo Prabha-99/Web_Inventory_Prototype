@@ -1,1 +1,1 @@
-# Web-based_Inventory_Manangment_system
+# Web-based_Inventory_Manangment_System
